@@ -6,21 +6,71 @@
 </head>
 <body>
 <script>
-  function Dog(name, breed) {
-    this.name = name;
-    this.breed = breed;
+  //static
+  //get
+  //set
+
+  class Dog {
+    constructor(name, breed, color) {
+      this.name = name;
+      this.breed = breed;
+      this.color = color;
+    }
+    bark() {
+    return `Woof my name is ${this.name}`; 
+    }
+    get description() {
+      return `${this.name} is a ${this.color} ${this.breed}`;
+    }
+    set giveAge(value) {
+      this.age = value;
+    }
+    get giveAge() {
+      return `${this.name} is ${this.age} years old`;
+    }
+    static info() {
+      console.log("Hi I make Dogs")
+    }
   }
 
-  Dog.prototype.bark = function() {
-    console.log(`Bark Bark! My name is ${this.name}`);
-  };
+  const ellie = new Dog('ellie', 'golden doodle', 'gold')
+  console.log(ellie)
 
-  Dog.prototype.cuddle = function() {
-    console.log(`I love you owner!`);
-  };
 
-  const snickers = new Dog('Snickers', 'King Charles');
-  const sunny = new Dog('Sunny', 'Golden Doodle');
+
+  // class Dog {
+  //   constructor(name, breed) {
+  //     this.name = name;
+  //     this.breed = breed;
+  //   }
+
+  //   bark() {
+  //     console.log(`bark my name is ${this.name}`)
+  //   }
+
+  //   cuddle() {
+  //     console.log(`I love you owner!`)
+  //   }
+  // }
+
+
+
+
+  // function Dog(name, breed) {
+  //   this.name = name;
+  //   this.breed = breed;
+  // }
+
+  // Dog.prototype.bark = function() {
+  //   console.log(`Bark Bark! My name is ${this.name}`);
+  // };
+
+  // Dog.prototype.cuddle = function() {
+  //   console.log(`I love you owner!`);
+  // };
+
+  // const snickers = new Dog('Snickers', 'King Charles');
+  // const sunny = new Dog('Sunny', 'Golden Doodle');
 
 </script>
 </body>

@@ -28,9 +28,19 @@
 </head>
 <body>
   <h2 class="jump">SPREADS!</h2>
+  
+  
 
 <script>
-  
+  const heading = document.querySelector('.jump');
+  //take each letter of heading content
+    //insert them into a span
+  //inject those spans back into heading
+  heading.innerHTML = [...heading.textContent].map(letter => `<span>${letter}</span>`).join("");
+
+
+
+
 </script>
 </body>
 </html>

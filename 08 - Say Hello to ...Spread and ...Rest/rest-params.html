@@ -6,6 +6,34 @@
 </head>
 <body>
 <script>
+
+
+//...rest param
+
+function convertCurrency(rate, ...amounts) {
+//   console.log(rate, amounts)
+  return amounts.map(amount => amount * rate)
+}
+
+console.log(convertCurrency(1.54, 2, 5, 575, 30))
+
+//...rest param for destructuring
+
+const runner = ['bella', 3954, 5.5, 5, 3, 2, 1, 56];
+//first is name, second is id, and third is log of all runs
+const [name, id, ...runs] = runner;
+console.log(name, id, runs)
+
+const dogs = ['ellie', 'lincoln', 'zola', 'kyuss'];
+const [goldie, red, poopie, puppy] = dogs;
+console.log(goldie, red, poopie, puppy)
+
+const allDogs = dogs.map(dog => `${dog} is mine`);
+console.log(allDogs)
+
+const household = ['bella', 'nic', 'ellie', 'lincoln', 'zola', 'kyuss'];
+const [she, him, ...doggies] = household;
+console.log(she, him, dogs)
   // function convertCurrency(rate, tax, tip, ...amounts) {
   //   console.log(rate, tax, tip, amounts);
   //   return amounts.map(amount => amount * rate);
